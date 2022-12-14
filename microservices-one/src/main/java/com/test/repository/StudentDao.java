@@ -7,13 +7,13 @@ import com.test.Model.Student;
 
 public interface StudentDao {
 
-	Student updateStudentById(Student stu);
+	String updateStudentById(Student stu);
 
-	Student addStudent(Student student);
+	String addStudent(Student student);
 
 	List<Student> getStudent();
 
-	Optional<Student> getStudentById(Integer id);
+	Student getStudentById(Integer id);
 
 	String deleteStudentById(Integer id);
 

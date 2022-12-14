@@ -7,14 +7,14 @@ import com.test.Model.Student;
 
 public interface StudentService {
 
-	Student updateStudentById(Student stu);
+	String updateStudentById(Student stu);
 
 	String deleteStudentById(Integer id);
 
-	Optional<Student> getStudentById(Integer id);
+	Student getStudentById(Integer id);
 
 	List<Student> getStudent();
 
-	Student addStudent(Student student);
+	String addStudent(Student student);
 
 }

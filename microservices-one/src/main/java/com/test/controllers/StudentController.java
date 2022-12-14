@@ -22,7 +22,7 @@ public class StudentController {
 	private  StudentService studentService;
 	
 	@PostMapping("/addStudent")
-	public Student addStudent(@RequestBody Student Student)
+	public String addStudent(@RequestBody Student Student)
 	{
 		return studentService.addStudent(Student);
 		
@@ -34,7 +34,7 @@ public class StudentController {
 		
 	}
 	@GetMapping("/getStudent/{id}")
-	public Optional<Student> getStudentById(@PathVariable Integer id)
+	public Student getStudentById(@PathVariable Integer id)
 	{
 		return studentService.getStudentById(id);
 		
@@ -46,7 +46,7 @@ public class StudentController {
 		
 	}
 	@PutMapping("/updateStudent")
-	public Student updateStudentById( @RequestBody Student stu)
+	public String updateStudentById( @RequestBody Student stu)
 	{
 		return studentService.updateStudentById(stu);
 		

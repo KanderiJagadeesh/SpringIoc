@@ -16,7 +16,7 @@ public class StudentServiceImpl implements StudentService {
 	private StudentDao studentDao;
 
 	@Override
-	public Student updateStudentById(Student stu) {
+	public String updateStudentById(Student stu) {
 		
 		return studentDao.updateStudentById(stu);
 	}
@@ -28,7 +28,7 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public Optional<Student> getStudentById(Integer id) {
+	public Student getStudentById(Integer id) {
 		
 		return studentDao.getStudentById(id) ;
 	}
@@ -40,7 +40,7 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public Student addStudent(Student student) {
+	public String addStudent(Student student) {
 		
 		return studentDao.addStudent(student) ;
 	}
