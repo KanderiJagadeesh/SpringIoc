@@ -9,7 +9,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.test.Model.User;
+import com.test.Model.Userdata;
 
 @Repository
 public class UserDaoImpl implements UserDao {
@@ -18,11 +18,11 @@ public class UserDaoImpl implements UserDao {
 	private SessionFactory sessionFactory;
 
 	@Override
-	public String addUser(User user) {
+	public String addUser(Userdata user) {
 
 		Session session = sessionFactory.openSession();
 		session.getTransaction().begin();
-		User u = new User();
+		Userdata u = new Userdata();
 		u.setUsername(user.getUsername());
 		u.setEmail(user.getEmail());
 		u.setMobile(user.getMobile());
@@ -33,20 +33,20 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public List<User> allUser() {
+	public List<Userdata> allUser() {
 		Session session = sessionFactory.openSession();
 		session.getTransaction().begin();
-		List<User> list = session.createQuery("From User").list();
+		List<Userdata> list = session.createQuery("From User").list();
 
 		return list;
 	}
 
 	@Override
-	public User userById(Integer userid) {
+	public Userdata userById(Integer userid) {
 		Session session = sessionFactory.openSession();
 		session.getTransaction().begin();
-		User user = session.get(User.class, userid);
-		User u = new User();
+		Userdata user = session.get(Userdata.class, userid);
+		Userdata u = new Userdata();
 		if (user != null)
 			session.getClass();
 		u.setUserid(user.getUserid());
@@ -58,10 +58,10 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public String updateUser(User user) {
+	public String updateUser(Userdata user) {
 		Session session = sessionFactory.openSession();
 		session.getTransaction().begin();
-		User u = new User();
+		Userdata u = new Userdata();
 		u.setUsername(user.getUsername());
 		u.setEmail(user.getEmail());
 		u.setMobile(user.getMobile());

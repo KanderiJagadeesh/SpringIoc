@@ -2,17 +2,17 @@ package com.test.services;
 
 import java.util.List;
 
-import com.test.Model.User;
+import com.test.Model.Userdata;
 
 public interface UserService {
 
-	String addUser(User user);
+	String addUser(Userdata user);
 
-	List<User> allUser();
+	List<Userdata> allUser();
 
-	User userById(Integer userid);
+	Userdata userById(Integer userid);
 
-	String updateUser(User user);
+	String updateUser(Userdata user);
 
 	String deleteUser(Integer userid);
 

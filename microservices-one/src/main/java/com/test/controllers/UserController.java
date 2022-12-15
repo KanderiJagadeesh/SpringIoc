@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.test.Model.User;
+import com.test.Model.Userdata;
 import com.test.services.UserService;
 
 @RestController
@@ -22,23 +22,23 @@ public class UserController {
 	private UserService userService;
 	
 	@PostMapping("/addUser")
-	public String addUser(@RequestBody User user)
+	public String addUser(@RequestBody Userdata user)
 	{
 		return userService.addUser(user);
 	}
 	
 	@GetMapping("/allUser")
-	public List<User> allUser()
+	public List<Userdata> allUser()
 	{
 		return userService.allUser();
 	}
 	@GetMapping("/user/{userid}")
-	public User userById(@PathVariable Integer userid )
+	public Userdata userById(@PathVariable Integer userid )
 	{
 		return userService.userById(userid);
 	}
 	@PutMapping("/updateUser")
-	public String  updateUser(@RequestBody User user)
+	public String  updateUser(@RequestBody Userdata user)
 	{
 		return userService.updateUser(user);
 	}

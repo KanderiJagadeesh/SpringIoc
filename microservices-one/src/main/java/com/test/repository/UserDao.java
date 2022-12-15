@@ -2,17 +2,17 @@ package com.test.repository;
 
 import java.util.List;
 
-import com.test.Model.User;
+import com.test.Model.Userdata;
 
 public interface UserDao {
 
-	String addUser(User user);
+	String addUser(Userdata user);
 
-	List<User> allUser();
+	List<Userdata> allUser();
 
-	User userById(Integer userid);
+	Userdata userById(Integer userid);
 
-	String updateUser(User user);
+	String updateUser(Userdata user);
 
 	String deleteUser(Integer userid);
 
